@@ -65,7 +65,7 @@ var ScrollBarCover = new Class({
 
             this.sliderSteps = this.container.getScrollSize().y - this.container.getStyle('height').toInt();
 
-            var slider = new Slider(container + '-scrollbar-slider-element', container + '-scrollbar-slider-knob', {
+            var slider = new Slider(container + '-scrollbarcover-slider-element', container + '-scrollbarcover-slider-knob', {
                                 mode: 'vertical',
                                 steps: this.sliderSteps
                         }).addEvent('change', function(position){
@@ -75,7 +75,7 @@ var ScrollBarCover = new Class({
             new ScrollSpy({container: this.container}).addEvent('scroll', function(position){
                 slider.set(position.y);
             });
-            
+
         }
     
     });
