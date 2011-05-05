@@ -10,16 +10,16 @@ You need to add the id of the element where you want to have the cover scrollbar
 
 JavaScript:
 
-new ScrollBarCover('the_id_of_the_element');
+new ScrollBarCover('the_id_of_the_element', 'namespace');
 
 CSS:
 
 id:
 
-* the_id_of_the_element + -scrollbarcover-cover-wraper
-* the_id_of_the_element + -scrollbarcover-slider-container
-* the_id_of_the_element + -scrollbarcover-slider-element
-* the_id_of_the_element + -scrollbarcover-slider-knob
+* namespace + -scrollbarcover-cover-wraper
+* namespace + -scrollbarcover-slider-container
+* namespace + -scrollbarcover-slider-element
+* namespace + -scrollbarcover-slider-knob
 
 class:
 

@@ -25,7 +25,7 @@ var ScrollBarCover = new Class({
         Implements: [Events],
         
         /* initialization */
-        initialize: function(container) {
+        initialize: function(container, namespace) {
             /* container exists? */
             this.container = document.id(container);
 
@@ -40,7 +40,7 @@ var ScrollBarCover = new Class({
             this.containerSize = this.container.getSize();
 
 	    this.sliderContainer = new Element('div', {
-                id: container + '-scrollbarcover-slider-container',
+                id: namespace + '-scrollbarcover-slider-container',
                 styles: {
                     'position': 'relative',
                     'width': 16,
@@ -48,15 +48,15 @@ var ScrollBarCover = new Class({
                     'float': 'right'
                 }
             }).grab(new Element('div', {
-                'id': container + '-scrollbarcover-slider-element',
+                'id': namespace + '-scrollbarcover-slider-element',
 		'class': 'scrollbarcover-slider-element'
             }).grab(new Element('div', {
-                'id': container + '-scrollbarcover-slider-knob',
+                'id': namespace + '-scrollbarcover-slider-knob',
 		'class': 'scrollbarcover-slider-knob'
             })));
 
             new Element('div', {
-                id: container + '-scrollbarcover-cover-wraper',
+                id: namespace + '-scrollbarcover-cover-wraper',
                 styles: {
                     width: this.containerSize.x,
                     height: this.containerSize.y
@@ -65,7 +65,7 @@ var ScrollBarCover = new Class({
 
             this.sliderSteps = this.container.getScrollSize().y - this.container.getStyle('height').toInt();
 
-            var slider = new Slider(container + '-scrollbarcover-slider-element', container + '-scrollbarcover-slider-knob', {
+            var slider = new Slider(namespace + '-scrollbarcover-slider-element', namespace + '-scrollbarcover-slider-knob', {
                                 mode: 'vertical',
                                 steps: this.sliderSteps
                         }).addEvent('change', function(position){
