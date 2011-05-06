@@ -41,6 +41,7 @@ var ScrollBarCover = new Class({
 
 	    this.sliderContainer = new Element('div', {
                 id: namespace + '-scrollbarcover-slider-container',
+		'class': 'scrollbarcover-slider-container',
                 styles: {
                     'position': 'relative',
                     'width': 16,
@@ -57,6 +58,7 @@ var ScrollBarCover = new Class({
 
             new Element('div', {
                 id: namespace + '-scrollbarcover-cover-wraper',
+		'class': 'scrollbarcover-cover-wraper',
                 styles: {
                     width: this.containerSize.x,
                     height: this.containerSize.y
