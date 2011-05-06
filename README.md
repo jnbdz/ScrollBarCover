@@ -3,6 +3,10 @@ ScrollBarCover
 
 This plugin is made to cover the scrollbar with a slider so you can style it.
 
+Works in: IE 8, FireFox, Safari and Google Chrome.
+
+Problems found in IE 6 and in Opera browsers.
+
 How to use
 ----------
 
